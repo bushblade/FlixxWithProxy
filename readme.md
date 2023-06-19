@@ -38,3 +38,13 @@ npm i
 ```bash
 netlify dev
 ```
+
+# Deploying to Netlify
+
+- Connect your Netlify account to your Github account
+- Create a repository for the project on Github
+- From your Netlify panel choose **Add new site -> import an existing project**
+- Choose Github
+- Find your Flixx app repository
+- Add a build command of `npm i --prefix functions`
+- In **Settings** set your env variables
