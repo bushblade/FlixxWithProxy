@@ -2,22 +2,39 @@
 
 Movie info application built with vanilla JavaScript that uses **version 3** of the [TMDB API](https://developers.themoviedb.org/3)
 
-This is part of my **Modern JS From The Beginning 2.0** course
+Adapted from a project in Brad Traversy's [ Modern JS From The Beginning 2.0 ](https://www.traversymedia.com/modern-javascript-2-0) course to use Netlify cloud functions to proxy the requests and so hide the API key from the client.
 
-<img src="images/screen.jpg" width="500">
-
-This includes the most populr movies and TV shows with detail pages, a search box for movies and shows with full pagination and a slider for movies that are currently playing in theaters. The slider uses the [Swiper](https://swiperjs.com) library.
+This includes the most popular movies and TV shows with detail pages, a search box for movies and shows with full pagination and a slider for movies that are currently playing in theaters. The slider uses the [Swiper](https://swiperjs.com) library.
 
 ## Usage
 
-Just clone or download and then register for a free API key at https://www.themoviedb.org/settings/api
+Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/) globally on
+your system.
 
-Once you get your key, just add it to the `api.apiKey` value in the global state at the top.
+```bash
+npm i -g netlify-cli
+```
 
-**Note:** If you are using this as a production project, you should not store this in the client. You can create a proxy server and store your key there. I may add that to the repo later on.
+Clone or download this project and then register for a free API key at [ https://www.themoviedb.org/settings/api ](https://www.themoviedb.org/settings/api)
 
-I also may convert this to use a module bundler such as Vite or Webpack.
+Once you get your key, create a **.env.local** file in the root of the project
+with the following...
 
-## Theme (HTML & CSS)
+```bash
+TMDB_API_KEY=replace_with_your_key
+TMDB_API_URL=https://api.themoviedb.org/3/
 
-I also included the theme here for you to download. It does not include any JavaScript at all. This is what you should use if you are following along with the course.
+```
+
+### Install functions dependencies
+
+```bash
+cd functions
+npm i
+```
+
+### Run Netlify CLI in the project root
+
+```bash
+netlify dev
+```
