@@ -46,5 +46,5 @@ netlify dev
 - From your Netlify panel choose **Add new site -> import an existing project**
 - Choose Github
 - Find your Flixx app repository
-- Add a build command of `npm i --prefix functions`
 - In **Settings** set your env variables
+- Add a build command of `npm i --prefix functions`
