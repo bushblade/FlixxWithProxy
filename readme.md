@@ -22,7 +22,7 @@ with the following...
 
 ```bash
 TMDB_API_KEY=replace_with_your_key
-TMDB_API_URL=https://api.themoviedb.org/3/
+TMDB_API_URL=https://api.themoviedb.org/3
 
 ```
 
